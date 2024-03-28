@@ -147,13 +147,13 @@ const Hero = () => {
             </div>
           </header>
           <div className="cards">
-            {cards.map((data, index) => {
+            {cards.map((data) => {
               return (
                 <React.Fragment>
                   <div
                     className="card"
                     style={{ backgroundColor: data.bgColor }}
-                    key={index}
+                    key={data.id}
                   >
                     <header>
                       <div className="logo">
@@ -198,7 +198,7 @@ const Hero = () => {
                       </div>
                     </div>
                     <div className="card-footer">
-                      <button className={index === 1 ? "active" : ""}>
+                      <button className={data.id === 1 ? "active" : ""}>
                         <span>Explore</span>
                         <svg
                           width="25"

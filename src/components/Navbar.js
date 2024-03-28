@@ -5,13 +5,13 @@ const Navbar = ({ screenWidth }) => {
   const [showModal, setShowModal] = useState(false);
   const [modal, setModal] = useState(false);
 
-  const HandleFontSize = () => {
-    if (screenWidth <= 900) {
-      setShowModal(true);
-    } else {
-      setShowModal(false);
-    }
-  };
+  // const HandleFontSize = () => {
+  //   if (screenWidth <= 900) {
+  //     setShowModal(true);
+  //   } else {
+  //     setShowModal(false);
+  //   }
+  // };
 
   const HandleModal = () => {
     if (modal) {
@@ -24,6 +24,13 @@ const Navbar = ({ screenWidth }) => {
   };
 
   useEffect(() => {
+    const HandleFontSize = () => {
+      if (screenWidth <= 900) {
+        setShowModal(true);
+      } else {
+        setShowModal(false);
+      }
+    };
     HandleFontSize();
   }, [screenWidth]);
 
