@@ -17,7 +17,6 @@ body {
 /* ----------------Navbar-------------------------- */
 
 .navbar {
-  /* border: 1px solid red; */
   width: 100%;
   height: 98px;
   display: flex;
@@ -146,7 +145,6 @@ body {
 
 .hero .main {
   width: 85%;
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,10 +182,6 @@ body {
 }
 
 .hero .main header .right {
-  /* display: flex;
-  align-items: end;
-  justify-content: end;
-  flex-direction: row; */
   height: 72px;
   cursor: pointer;
 }
@@ -211,12 +205,10 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  /* background-color: #d3fde6; */
 }
 
 .hero .main .cards .card header {
   border-bottom: 2px solid;
-  /* height: 50px; */
   padding: 12px 15px;
   display: flex;
   align-items: center;
@@ -268,19 +260,12 @@ body {
   color: #030303;
 }
 
-.hero .main .cards .card .card-body .image {
-  /* border: 1px solid red; */
-  /* margin-bottom: -14px; */
-}
-
 .hero .main .cards .card .card-body .image img {
   width: 100%;
-  /* height: 160px; */
 }
 
 .hero .main .cards .card .card-footer {
   border-top: 2px solid;
-  /* border: 1px solid red; */
   height: 70px;
   display: flex;
   align-items: center;
@@ -422,7 +407,6 @@ body {
   }
 
   .banner .active {
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -470,7 +454,6 @@ body {
   }
 
   .banner .active {
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -504,7 +487,6 @@ body {
   }
 
   .banner .active {
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;

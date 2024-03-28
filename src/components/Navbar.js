@@ -16,14 +16,12 @@ const Navbar = ({ screenWidth }) => {
   const HandleModal = () => {
     if (modal) {
       setModal(false);
-      document.body.classList.remove("no-scroll"); // Remove no-scroll class from body
+      document.body.classList.remove("no-scroll");
     } else {
       setModal(true);
-      document.body.classList.add("no-scroll"); // Add no-scroll class to body
+      document.body.classList.add("no-scroll");
     }
   };
-
-  // console.log(chain);
 
   useEffect(() => {
     HandleFontSize();
