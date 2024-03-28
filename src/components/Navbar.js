@@ -25,7 +25,7 @@ const Navbar = ({ screenWidth }) => {
 
   useEffect(() => {
     HandleFontSize();
-  });
+  }, [screenWidth]);
 
   return (
     <React.Fragment>

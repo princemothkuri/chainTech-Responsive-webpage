@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 
 function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  console.log(screenWidth);
 
   const updateScreenDimensions = () => {
     setScreenWidth(window.innerWidth);

@@ -35,11 +35,9 @@ const Banner = ({ screenWidth }) => {
     }
   };
 
-  console.log(chain);
-
   useEffect(() => {
     HandleFontSize();
-  });
+  }, [screenWidth]);
 
   return (
     <header className="banner">
