@@ -6,35 +6,6 @@ const Banner = ({ screenWidth }) => {
     height: "84",
   });
 
-  // const HandleFontSize = () => {
-  //   if (screenWidth > 1025) {
-  //     setChain({
-  //       width: "688",
-  //       height: "84",
-  //     });
-  //   } else if (screenWidth <= 1025 && screenWidth > 768) {
-  //     setChain({
-  //       width: "598",
-  //       height: "74",
-  //     });
-  //   } else if (screenWidth <= 600 && screenWidth > 490) {
-  //     setChain({
-  //       width: "498",
-  //       height: "54",
-  //     });
-  //   } else if (screenWidth <= 489 && screenWidth > 400) {
-  //     setChain({
-  //       width: "328",
-  //       height: "36",
-  //     });
-  //   } else if (screenWidth <= 399 && screenWidth > 290) {
-  //     setChain({
-  //       width: "100%",
-  //       height: "36",
-  //     });
-  //   }
-  // };
-
   useEffect(() => {
     const HandleFontSize = () => {
       if (screenWidth > 1025) {
