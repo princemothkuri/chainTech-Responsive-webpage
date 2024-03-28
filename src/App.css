@@ -1,38 +1,536 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  font-family: Inter;
+  background: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.no-scroll {
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ----------------Navbar-------------------------- */
+
+.navbar {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 98px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+}
+
+.navbar nav {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar nav .logo {
+  cursor: pointer;
+}
+
+.navbar nav section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.navbar nav section .links {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.navbar nav section .active {
+  color: #00ffa7;
+}
+
+.menu-lines {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-lines .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+/* -----------------Banner-------------------------------- */
+
+.banner {
+  padding: 120px 40px 100px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+.banner h1 {
+  font-size: 110px;
+  font-weight: 900;
+  line-height: 10.5px;
+  letter-spacing: 0.11em;
+  text-align: left;
+  height: 130px;
+}
+
+.banner .active {
+  margin-top: -40px;
+}
+
+.banner p {
+  max-width: 800px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27.39px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.banner button {
+  margin-top: 60px;
+  width: 211.97px;
+  height: 66.06px;
+  border-radius: 50px;
+  opacity: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 35px;
+  cursor: pointer;
+  border: none;
+}
+
+.banner button span {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25.45px;
+  text-align: left;
+  color: black;
+}
+
+/* -------------Hero--------------------- */
+
+.hero {
+  background: white;
+  color: black;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero .main {
+  width: 85%;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.hero .main header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero .main header .left {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hero .main header .left h2 {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 40.7px;
+  text-align: left;
+}
+
+.hero .main header .left p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25.45px;
+  text-align: left;
+}
+
+.hero .main header .right {
+  /* display: flex;
+  align-items: end;
+  justify-content: end;
+  flex-direction: row; */
+  height: 72px;
+  cursor: pointer;
+}
+
+.hero .main .cards {
+  width: 100%;
+  color: black;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero .main .cards .card {
+  width: 253px;
+  height: 402px;
+  border-radius: 20px;
+  border: 3px solid;
+  opacity: 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* background-color: #d3fde6; */
+}
+
+.hero .main .cards .card header {
+  border-bottom: 2px solid;
+  /* height: 50px; */
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.hero .main .cards .card header .logo {
+  background: black;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.hero .main .cards .card header .logo .c {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+
+.hero .main .cards .card header .logo .cp {
+  position: absolute;
+  top: 5px;
+  left: 14px;
+}
+
+.hero .main .cards .card header p {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 21.21px;
+  text-align: center;
+}
+
+.hero .main .cards .card .card-body {
+  height: 100%;
+  padding: 40px 20px 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.hero .main .cards .card .card-body h3 {
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 24.24px;
+  text-align: center;
+  color: #030303;
+}
+
+.hero .main .cards .card .card-body .image {
+  /* border: 1px solid red; */
+  /* margin-bottom: -14px; */
+}
+
+.hero .main .cards .card .card-body .image img {
+  width: 100%;
+  /* height: 160px; */
+}
+
+.hero .main .cards .card .card-footer {
+  border-top: 2px solid;
+  /* border: 1px solid red; */
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 15px;
+}
+
+.hero .main .cards .card .card-footer button {
+  width: 121px;
+  height: 38.55px;
+  border-radius: 50px;
+  border: 2px solid;
+  opacity: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.hero .main .cards .card .card-footer button span {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.8px;
+  text-align: left;
+  margin-left: 12px;
+}
+
+.hero .main .cards .card .card-footer .active {
+  background-color: black;
+  color: white;
+  border: black 2px solid;
+}
+
+/* ----------Footer------------------- */
+
+.footer {
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer hr {
+  margin: 20px 0px 10px 0px;
+  width: 70%;
+  border: 1px solid #5e5e5e;
+}
+
+.footer p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: center;
+  color: #98a6ac;
+}
+
+/* ---------Modal START-------------- */
+.sideBar-modal-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 98px;
+  background-color: black;
+  z-index: 2;
+  height: 100vh;
+  transition: left 0.3s ease-in-out;
+}
+
+.sideBar-modal-container {
+  transition: left 0.3s ease-in-out;
+  position: fixed;
+  margin-top: 98px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sideBar-modal-container nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -120px;
+  gap: 60px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+}
+
+.sideBar-modal-container nav .links {
+  cursor: pointer;
+}
+
+.sideBar-modal-container nav .active {
+  color: #00ffa7;
+}
+
+@media only screen and (max-width: 1100px) {
+  .hero .main .cards .card {
+    width: 31%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 1025px) {
+  .banner h1 {
+    font-size: 95px;
+    font-weight: 900;
+    line-height: 10.5px;
+    letter-spacing: 0.11em;
+    text-align: left;
+    height: 130px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .banner h1 {
+    font-size: 95px;
+    font-weight: 900;
+    line-height: 10.5px;
+    letter-spacing: 0.11em;
+    text-align: left;
+    min-height: 130px;
+  }
+
+  .banner .active {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .banner .active .to {
+    margin-bottom: 68px;
+  }
+
+  .banner .active .chaintech {
+    margin-bottom: 20px;
+  }
+
+  .banner p {
+    margin-top: 20px;
+  }
+
+  .hero .main .cards .card {
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .hero {
+    padding: 20px;
+  }
+
+  .hero .main {
+    width: 100%;
+  }
+
+  .hero .main .cards .card {
+    width: 253px;
+  }
+
+  .banner h1 {
+    font-size: 67px;
+    font-weight: 900;
+    line-height: 10.5px;
+    letter-spacing: 0.11em;
+    text-align: left;
+    min-height: 130px;
+  }
+
+  .banner .active {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -20px;
+  }
+
+  .banner .active .to {
+    margin-bottom: 45px;
+  }
+
+  .banner .active .chaintech {
+    margin-bottom: 70px;
+  }
+
+  .banner button {
+    width: 180px;
+    height: 62px;
+    gap: 25px;
+  }
+}
+
+@media only screen and (max-width: 489px) {
+  .banner h1 {
+    font-size: 47px;
+    font-weight: 900;
+    line-height: 10.5px;
+    letter-spacing: 0.11em;
+    text-align: left;
+    min-height: 130px;
+  }
+
+  .banner .active {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -40px;
+  }
+
+  .banner .active .to {
+    margin-bottom: 45px;
+  }
+
+  .banner button {
+    width: 180px;
+    height: 62px;
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 40px;
+  }
+
+  .hero .main {
+    width: 100%;
+  }
+
+  .hero .main .cards .card {
+    width: 100%;
   }
 }
